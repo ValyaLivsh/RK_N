@@ -31,7 +31,7 @@ jobs:
       run: cmake --build . --config $BUILD_TYPE
 
     - name: list dir
-      run: ls && ls build
+      run: ls && find . -name 'runTests'
       
     - name: run Test
       run: ./build/tests/runTests

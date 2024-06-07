@@ -36,8 +36,8 @@ jobs:
       
     - name: run Test
       run: |
-        pwd \
-          ./Singleton/tests/runTests
+        pwd
+        ./Singleton/tests/runTests
 
     - name: Test
       working-directory: ${{runner.workspace}}/build

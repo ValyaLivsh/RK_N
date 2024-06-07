@@ -35,7 +35,7 @@ jobs:
       run: ls && find . -name 'runTests' && echo && ls Singleton
       
     - name: run Test
-      run: ./tests/runTests
+      run: ./Singleton/tests/runTests
 
     - name: Test
       working-directory: ${{runner.workspace}}/build

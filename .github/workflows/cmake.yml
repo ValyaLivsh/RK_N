@@ -32,10 +32,12 @@ jobs:
 
     - name: list dir
       working-directory: ${{runner.workspace}}/build
-      run: ls && echo "--------- Find ---------" && find . -name 'runTests' && echo && ls Singleton
+      run: pwd && echo "---- ls ----" && ls && echo "--------- Find ---------" && find . -name 'runTests' && echo && ls Singleton
       
     - name: run Test
-      run: ./Singleton/tests/runTests
+      run: |
+        pwd \
+          ./Singleton/tests/runTests
 
     - name: Test
       working-directory: ${{runner.workspace}}/build

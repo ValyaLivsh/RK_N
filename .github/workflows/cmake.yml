@@ -40,3 +40,6 @@ jobs:
       with:
         name: build-artifacts
         path: ${{runner.workspace}}/build
+        
+     - name: run Test
+     run:./build/tests/runTests

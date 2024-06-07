@@ -41,5 +41,5 @@ jobs:
         name: build-artifacts
         path: ${{runner.workspace}}/build
         
-     - name: run Test
-     run:./build/tests/runTests
+     - name: runTest
+       run: ./build/tests/runTests

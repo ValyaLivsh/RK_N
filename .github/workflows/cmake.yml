@@ -38,7 +38,7 @@ jobs:
       working-directory: ${{runner.workspace}}/build
       run: |
         pwd
-        ./Singleton/tests/runTests
+        ./tests/runTests
 
     - name: Test
       working-directory: ${{runner.workspace}}/build

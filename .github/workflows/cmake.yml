@@ -30,6 +30,12 @@ jobs:
       shell: bash
       run: cmake --build . --config $BUILD_TYPE
 
+    - name: list dir
+      run: ls && ls build
+      
+    - name: run Test
+      run: ./build/tests/runTests
+
     - name: Test
       working-directory: ${{runner.workspace}}/build
       shell: bash
@@ -41,5 +47,3 @@ jobs:
         name: build-artifacts
         path: ${{runner.workspace}}/build
         
-     - name: runTest
-       run: ./build/tests/runTests

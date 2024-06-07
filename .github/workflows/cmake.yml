@@ -35,6 +35,7 @@ jobs:
       run: pwd && echo "---- ls ----" && ls && echo "--------- Find ---------" && find . -name 'runTests' && echo && ls Singleton
       
     - name: run Test
+      working-directory: ${{runner.workspace}}/build
       run: |
         pwd
         ./Singleton/tests/runTests
